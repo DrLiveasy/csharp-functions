@@ -54,3 +54,15 @@ int[] ElevaArrayAlQuadrato(int[] array)
     }
     return ArrayQuadrato;
 }
+//preso un array di numeri interi, restituisca
+//la somma totale di tutti gli elementi dell’array.
+int sommaElementiArray(int[] array)
+{
+    int somma = 0;
+    foreach (int i in array)
+    {
+        somma += i;
+    }
+
+    return somma;
+}
