@@ -1,8 +1,21 @@
 ﻿// See https://aka.ms/new-console-template for more informationi
 
+int[] ArrayNumeri = { 2, 6, 7, 5, 3, 9};
 
+/*
+int[] ArrayAlQuadrato = ElevaArrayAlQuadrato(ArrayNumeri);
+StampaArrayInteri(ArrayAlQuadrato);
+*/
 
-
+StampaArrayInteri(ArrayNumeri);
+StampaArrayInteri(ElevaArrayAlQuadrato(ArrayNumeri));
+StampaArrayInteri(ArrayNumeri);
+Console.WriteLine(sommaElementiArray(ArrayNumeri));
+Console.WriteLine(
+    Quadrato(
+        sommaElementiArray(ArrayNumeri)
+        )
+    );
 
 
 
@@ -31,7 +44,21 @@ void StampaArrayInteri(int[] array)
             Console.Write(array[i] + " , ");
         }
     }
-    Console.Write("]");
+    Console.WriteLine("]");
+
+    //Console.Write("[");
+    //for (int i = 0; i < ElevaArrayAlQuadrato(array).Length; i++)
+    //{
+    //    if (i == array.Length - 1)
+    //    {
+    //        Console.Write(ElevaArrayAlQuadrato(array)[i]);
+    //    }
+    //    else
+    //    {
+    //        Console.Write(ElevaArrayAlQuadrato(array)[i] + " , ");
+    //    }
+    //}
+    //Console.WriteLine("]");
 
 }
 //restituisca il quadrato del numero passato
@@ -44,12 +71,12 @@ int Quadrato(int numero)
 }
 //preso un array di numeri interi, restituisca un
 //nuovo array con tutti gli elementi elevati quadrato.
-int[] ElevaArrayAlQuadrato(int[] array)
+int[] ElevaArrayAlQuadrato(int[] array1)
 {
-    int[] ArrayQuadrato = (int[])array.Clone();
+    int[] ArrayQuadrato = (int[])array1.Clone();
     for (int i = 0; i < ArrayQuadrato.Length; i++)
     {
-        ArrayQuadrato[i] = ArrayQuadrato[i] * ArrayQuadrato[i];
+        ArrayQuadrato[i] = (ArrayQuadrato[i] * ArrayQuadrato[i]);   
 
     }
     return ArrayQuadrato;
