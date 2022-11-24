@@ -7,10 +7,6 @@
 
 
 
-
-
-
-
 //-------------------Funzioni-------------------
 
 void StampaArrayInteri(int[] arrayInteri)
@@ -29,4 +25,10 @@ void StampaArrayInteri(int[] arrayInteri)
     }
     Console.Write("]");
 
+}
+
+int Quadrato(int numero)
+{
+    numero = numero + numero;
+    return numero;
 }
